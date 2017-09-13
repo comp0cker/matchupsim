@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     for (var i = 0; i < decks.length; i++) // loops through every deck
     {
         var num = 0;
@@ -24,40 +25,23 @@ $(document).on('input', '.slide', function() {
 
     for (var i = 0; i < decks.length; i++) // loops through every deck
     {
-        var num = 0;
-        var count = 0;
-        var counts = [];
-        //alert(decks[0].length);
+        var ratios = [];
+        var freqs = [];
+        var totalFreq = 0
+
         for (var j = 1; j < decks[i].length; j++) { // loops through each matchup of the given deck decks[i]
-            //alert(decks[i].length);
-
-            var inputInt = parseInt($('#' + decks[i][j].deck).children('.inp').text());
-
-            for (var k = 0; k < inputInt; k++) {
-                num += ratio_calc(decks[i], j);
-                count++;
-            }
-
-            counts.push(inputInt);
-
+            var freq = parseInt($('#' + decks[i][j].deck).children('.inp').text());
+            ratios.push(ratio_calc(decks[i], j));
+            freqs.push(freq);
+            totalFreq += freq;
         }
 
-        // FIX THISSS IT ONLY NEEDS TO RUN ONCE
+        var num = 0;
 
-        var totalCounts = 0;
-        for (var k = 0; k < counts.length; counts++) // finding the total number of counts (weights)
-            totalCounts += counts[k];
+        for (var m = 0; m < ratios.length; m++)
+            num += (ratios[m] * freqs[m]);
 
-        for (var l = 0; l < counts.length; counts++) // making the counts array contain weighted percents of each value
-            counts[l] /= totalCounts;
-
-        var totalDivCounts = 0;
-
-        for (var m = 0; m < counts.length; counts++) // finding the total win percentage
-            totalDivCounts += counts[m];
-
-        num /= count; // the deck general win percentage is the average of the overall win percentages
-
+        num /= totalFreq;
 
         $('#' + decks[i][0].name).children('.num').text(num);
      }
