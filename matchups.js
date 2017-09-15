@@ -5,19 +5,24 @@ sfave - Slightly Favorable - 62.5%
 fave - Favorable - 75%
 vfave - Very Favorable - 87.5%
 
-Consistency ratios:
+Consistency/Speed ratios:
 trash - 12.5%
 bad - 25%
 decent - 50%
 good - 75%
 great - 87.5%
+
+Matchups - 80%
+Consistency - 10%
+Speed - 10%
  */
 
 var decks = [
     [
         {
             name: "gardevoir",
-            consistency: "good"
+            consistency: "good",
+            speed: "good"
         },
         {
             deck: "metagross",
@@ -37,18 +42,23 @@ var decks = [
         },
         {
             deck: "espeon_garb",
-            ratio: "fave"
+            ratio: "vfave"
         },
         {
             deck: "rainbow_road",
             ratio: null
+        },
+        {
+            deck: "pikachu_magnezone",
+            ratio: "even"
         }
     ]
     ,
     [
         {
             name: "metagross",
-            consistency: "decent"
+            consistency: "decent",
+            speed: "bad"
         },
         {
             deck: "gardevoir",
@@ -73,13 +83,18 @@ var decks = [
         {
             deck: "rainbow_road",
             ratio: null
+        },
+        {
+            deck: "pikachu_magnezone",
+            ratio: "fave"
         }
         ]
         ,
     [
         {
             name: "hooh_salazzle",
-            consistency: "great"
+            consistency: "great",
+            speed: "great"
         },
         {
             deck: "metagross",
@@ -104,13 +119,18 @@ var decks = [
         {
             deck: "rainbow_road",
             ratio: null
+        },
+        {
+            deck: "pikachu_magnezone",
+            ratio: null
         }
         ]
         ,
     [
         {
             name: "golisopod_garb",
-            consistency: "good"
+            consistency: "good",
+            speed: "decent"
         },
         {
             deck: "gardevoir",
@@ -118,7 +138,7 @@ var decks = [
         },
         {
             deck: "metagross",
-            ratio: "fave"
+            ratio: "sfave"
         },
         {
             deck: "hooh_salazzle",
@@ -130,18 +150,23 @@ var decks = [
         },
         {
             deck: "espeon_garb",
-            ratio: "fave"
+            ratio: "sfave"
         },
         {
             deck: "rainbow_road",
             ratio: "sfave"
+        },
+        {
+            deck: "pikachu_magnezone",
+            ratio: "fave"
         }
         ]
         ,
     [
         {
             name: "greninja",
-            consistency: "bad"
+            consistency: "good",
+            speed: "bad"
         },
         {
             deck: "gardevoir",
@@ -166,13 +191,18 @@ var decks = [
         {
             deck: "rainbow_road",
             ratio: "sfave"
+        },
+        {
+            deck: "pikachu_magnezone",
+            ratio: null
         }
     ]
     ,
     [
         {
             name: "espeon_garb",
-            consistency: "good"
+            consistency: "good",
+            speed: "good"
         },
         {
             deck: "gardevoir",
@@ -196,14 +226,18 @@ var decks = [
         },
         {
             deck: "rainbow_road",
-            ratio: null
+            ratio: "sfave"
+        },
+        {
+            deck: "pikachu_magnezone",
+            ratio: "sfave"
         }
-    ]
-    ,
+    ],
     [
         {
             name: "rainbow_road",
-            consistency: "decent"
+            consistency: "decent",
+            speed: "good"
         },
         {
             deck: "gardevoir",
@@ -227,7 +261,47 @@ var decks = [
         },
         {
             deck: "espeon_garb",
+            ratio: null
+        },
+        {
+            deck: "pikachu_magnezone",
+            ratio: "sfave"
+        }
+
+    ],
+    [
+        {
+            name: "pikachu_magnezone",
+            consistency: "good",
+            speed: "great"
+        },
+        {
+            deck: "gardevoir",
+            ratio: "even"
+        },
+        {
+            deck: "metagross",
+            ratio: null
+        },
+        {
+            deck: "hooh_salazzle",
             ratio: "fave"
+        },
+        {
+            deck: "golisopod_garb",
+            ratio: null
+        },
+        {
+            deck: "greninja",
+            ratio: "fave"
+        },
+        {
+            deck: "espeon_garb",
+            ratio: null
+        },
+        {
+            deck: "rainbow_road",
+            ratio: null
         }
     ]
     ];

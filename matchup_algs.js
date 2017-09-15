@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
     $(".consis").prop('checked', true);
+    $(".speed").prop('checked', true);
 
     var ctx = document.getElementById("chart");
     var graph = new Chart(ctx, {
@@ -43,6 +44,11 @@ $(document).ready(function() {
         },
         options: {
             scales: {
+                xAxes: [{
+                    ticks: {
+                        fontSize: 10
+                    }
+                }],
                 yAxes: [{
                     ticks: {
                         beginAtZero:true
@@ -71,7 +77,7 @@ $(document).ready(function() {
 
         num /= totalFreq;
 
-        num = num * .75 + convert(decks[i][0].consistency) * .25;
+        num = num * .80 + convert(decks[i][0].consistency) * .10 + convert(decks[i][0].speed) * .10;
 
         var str = '<div class="cont" id="' + decks[i][0].name + '"><p>' + decks[i][0].name + '<p class="cons">' + decks[i][0].consistency + '</p><p class="num">' + num + '</p></p>' + '<form action="#"> <p class="range-field"> <input type="range" class="slide" min="0" max="' + sliderRange + '" /> </p> </form><p class="inp">50</p></div>';
 
@@ -84,9 +90,18 @@ $(document).ready(function() {
             $("#col2").append(str);
     }
 
+    $(".cons").hide();
     graph.update();
 
     $('.consis').change(function() {
+        $(this).parent().parent().parent().children('.inp').html( $(this).val() ); // the input class is now equal to the value of the slider
+        graph.data.datasets[0].data = [];
+        for (var i = 0; i < decks.length; i++)
+            calc(i);
+        graph.update();
+    });
+
+    $('.speed').change(function() {
         $(this).parent().parent().parent().children('.inp').html( $(this).val() ); // the input class is now equal to the value of the slider
         graph.data.datasets[0].data = [];
         for (var i = 0; i < decks.length; i++)
@@ -126,8 +141,14 @@ $(document).ready(function() {
 
             num /= totalFreq;
 
-            if ($(".consis").prop('checked')) // if the consistency switch is flipped
-                num = num * .75 + convert(decks[i][0].consistency) * .25;
+            if ($(".consis").prop('checked') && $(".speed").prop('checked')) // if the consistency switch is flipped
+                num = num *.80 + convert(decks[i][0].consistency) * .10 + convert(decks[i][0].speed) * .10;
+            else if ($(".consis").prop('checked'))
+                num = num *.80 + convert(decks[i][0].consistency) * .10;
+            else if ($(".speed").prop('checked'))
+                num = num *.80 + convert(decks[i][0].speed) * .10;
+
+            convert(decks[i][0].consistency) * .10
 
             $('#' + decks[i][0].name).children('.num').text(num);
             graph.data.datasets[0].data.push(num);
