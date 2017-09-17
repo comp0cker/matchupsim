@@ -4,7 +4,7 @@ $(document).ready(function() {
     $(".speed").prop('checked', true);
 
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-        $("#cont").append('<div class="col s3" id = "col1"></div> <div class="col s3" id = "col2"></div> <div class="col s6" id = "col3"> <canvas id="chart" width="100" height="100"></canvas> </div>')
+        $("#cont").append('<div class="col s6" id = "col3"> <canvas id="chart" width="100" height="100"></canvas> </div> <div class="col s3" id = "col1"></div> <div class="col s3" id = "col2"></div> ')
     }
     else {
         $("#cont").append('<div class="row"> <div class="col s3" id = "col1"></div> <div class="col s3" id = "col2"></div> <div class="col s6" id = "col3"> <canvas id="chart" width="100" height="100"></canvas> </div> </div>')
