@@ -53,7 +53,7 @@ $(document).ready(function() {
             scales: {
                 xAxes: [{
                     ticks: {
-                        fontSize: 10
+                        autoSkip: false
                     }
                 }],
                 yAxes: [{
@@ -86,7 +86,7 @@ $(document).ready(function() {
 
         num = num * .80 + convert(decks[i][0].consistency) * .10 + convert(decks[i][0].speed) * .10;
 
-        var str = '<div class="cont" id="' + decks[i][0].name + '"><h4>' + decks[i][0].name + '</h4><p class="cons">' + decks[i][0].consistency + '</p><p class="num">' + num.toPrecision(4) + '</p><p> - frequency: </p><p class="inp">50</p>' + '<form action="#"> <p class="range-field"> <input type="range" class="slide" min="0" max="' + sliderRange + '" /> </p> </form></div>';
+        var str = '<div class="cont" id="' + decks[i][0].name + '"><h5>' + decks[i][0].name + '</h5><p class="cons">' + decks[i][0].consistency + '</p><p class="num">' + num.toPrecision(4) + '</p><p> - frequency: </p><p class="inp">50</p>' + '<form action="#"> <p class="range-field"> <input type="range" class="slide" min="0" max="' + sliderRange + '" /> </p> </form></div>';
 
         graph.data.labels.push(decks[i][0].name);
         graph.data.datasets[0].data.push(num);
