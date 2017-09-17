@@ -3,6 +3,13 @@ $(document).ready(function() {
     $(".consis").prop('checked', true);
     $(".speed").prop('checked', true);
 
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        $("#cont").append('<div class="col s3" id = "col1"></div> <div class="col s3" id = "col2"></div> <div class="col s6" id = "col3"> <canvas id="chart" width="100" height="100"></canvas> </div>')
+    }
+    else {
+        $("#cont").append('<div class="row"> <div class="col s3" id = "col1"></div> <div class="col s3" id = "col2"></div> <div class="col s6" id = "col3"> <canvas id="chart" width="100" height="100"></canvas> </div> </div>')
+    }
+
     var ctx = document.getElementById("chart");
     var graph = new Chart(ctx, {
         type: 'bar',
@@ -79,7 +86,7 @@ $(document).ready(function() {
 
         num = num * .80 + convert(decks[i][0].consistency) * .10 + convert(decks[i][0].speed) * .10;
 
-        var str = '<div class="cont" id="' + decks[i][0].name + '"><p>' + decks[i][0].name + '<p class="cons">' + decks[i][0].consistency + '</p><p class="num">' + num + '</p></p>' + '<form action="#"> <p class="range-field"> <input type="range" class="slide" min="0" max="' + sliderRange + '" /> </p> </form><p class="inp">50</p></div>';
+        var str = '<div class="cont" id="' + decks[i][0].name + '"><h4>' + decks[i][0].name + '</h4><p class="cons">' + decks[i][0].consistency + '</p><p class="num">' + num.toPrecision(4) + '</p><p> - frequency: </p><p class="inp">50</p>' + '<form action="#"> <p class="range-field"> <input type="range" class="slide" min="0" max="' + sliderRange + '" /> </p> </form></div>';
 
         graph.data.labels.push(decks[i][0].name);
         graph.data.datasets[0].data.push(num);
@@ -150,7 +157,7 @@ $(document).ready(function() {
 
             convert(decks[i][0].consistency) * .10
 
-            $('#' + decks[i][0].name).children('.num').text(num);
+            $('#' + decks[i][0].name).children('.num').text(num.toPrecision(4));
             graph.data.datasets[0].data.push(num);
     }
 });
