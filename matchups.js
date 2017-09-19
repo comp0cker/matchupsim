@@ -30,7 +30,7 @@ var decks = [
         },
         {
             deck: "hooh_salazzle",
-            ratio: "even"
+            ratio: "sfave"
         },
         {
             deck: "golisopod_garb",
@@ -45,12 +45,24 @@ var decks = [
             ratio: "vfave"
         },
         {
+            deck: "drampa_garb",
+            ratio: "vfave"
+        },
+        {
             deck: "rainbow_road",
             ratio: null
         },
         {
             deck: "pikachu_magnezone",
             ratio: "even"
+        },
+        {
+            deck: "ninetales",
+            ratio: "even"
+        },
+        {
+            deck: "bulu_vikavolt",
+            ratio: null
         }
     ]
     ,
@@ -70,7 +82,7 @@ var decks = [
         },
         {
             deck: "golisopod_garb",
-            ratio: null
+            ratio: "even"
         },
         {
             deck: "greninja",
@@ -78,7 +90,11 @@ var decks = [
         },
         {
             deck: "espeon_garb",
-            ratio: "vfave"
+            ratio: "fave"
+        },
+        {
+            deck: "drampa_garb",
+            ratio: "fave"
         },
         {
             deck: "rainbow_road",
@@ -86,6 +102,14 @@ var decks = [
         },
         {
             deck: "pikachu_magnezone",
+            ratio: null
+        },
+        {
+            deck: "ninetales",
+            ratio: "fave"
+        },
+        {
+            deck: "bulu_vikavolt",
             ratio: "fave"
         }
         ]
@@ -102,18 +126,22 @@ var decks = [
         },
         {
             deck: "gardevoir",
-            ratio: "even"
-        },
-        {
-            deck: "golisopod_garb",
-            ratio: "vfave"
-        },
-        {
-            deck: "greninja",
             ratio: null
         },
         {
+            deck: "golisopod_garb",
+            ratio: "fave"
+        },
+        {
+            deck: "greninja",
+            ratio: "fave" // with giratina promo
+        },
+        {
             deck: "espeon_garb",
+            ratio: "fave"
+        },
+        {
+            deck: "drampa_garb",
             ratio: "fave"
         },
         {
@@ -122,6 +150,14 @@ var decks = [
         },
         {
             deck: "pikachu_magnezone",
+            ratio: null
+        },
+        {
+            deck: "ninetales",
+            ratio: null
+        },
+        {
+            deck: "bulu_vikavolt",
             ratio: null
         }
         ]
@@ -138,7 +174,7 @@ var decks = [
         },
         {
             deck: "metagross",
-            ratio: "sfave"
+            ratio: "even"
         },
         {
             deck: "hooh_salazzle",
@@ -150,15 +186,27 @@ var decks = [
         },
         {
             deck: "espeon_garb",
-            ratio: "sfave"
+            ratio: "vfave"
+        },
+        {
+            deck: "drampa_garb",
+            ratio: "vfave"
         },
         {
             deck: "rainbow_road",
-            ratio: "sfave"
+            ratio: "fave"
         },
         {
             deck: "pikachu_magnezone",
             ratio: "fave"
+        },
+        {
+            deck: "ninetales",
+            ratio: "sfave"
+        },
+        {
+            deck: "bulu_vikavolt",
+            ratio: "even"
         }
         ]
         ,
@@ -178,7 +226,7 @@ var decks = [
         },
         {
             deck: "hooh_salazzle",
-            ratio: "sfave"
+            ratio: null
         },
         {
             deck: "golisopod_garb",
@@ -189,11 +237,23 @@ var decks = [
             ratio: null
         },
         {
+            deck: "drampa_garb",
+            ratio: null
+        },
+        {
             deck: "rainbow_road",
-            ratio: "sfave"
+            ratio: "fave"
         },
         {
             deck: "pikachu_magnezone",
+            ratio: null
+        },
+        {
+            deck: "ninetales",
+            ratio: "even"
+        },
+        {
+            deck: "bulu_vikavolt",
             ratio: null
         }
     ]
@@ -225,12 +285,71 @@ var decks = [
             ratio: "fave"
         },
         {
+            deck: "drampa_garb",
+            ratio: "fave"
+        },
+        {
             deck: "rainbow_road",
-            ratio: "sfave"
+            ratio: null
         },
         {
             deck: "pikachu_magnezone",
             ratio: "sfave"
+        },
+        {
+            deck: "ninetales",
+            ratio: null
+        },
+        {
+            deck: "bulu_vikavolt",
+            ratio: null
+        }
+    ],
+    [
+        {
+            name: "drampa_garb",
+            consistency: "good",
+            speed: "good"
+        },
+        {
+            deck: "gardevoir",
+            ratio: null
+        },
+        {
+            deck: "metagross",
+            ratio: null
+        },
+        {
+            deck: "hooh_salazzle",
+            ratio: null
+        },
+        {
+            deck: "golisopod_garb",
+            ratio: null
+        },
+        {
+            deck: "greninja",
+            ratio: "sfave"
+        },
+        {
+            deck: "espeon_garb",
+            ratio: null
+        },
+        {
+            deck: "rainbow_road",
+            ratio: null
+        },
+        {
+            deck: "pikachu_magnezone",
+            ratio: "sfave"
+        },
+        {
+            deck: "ninetales",
+            ratio: null
+        },
+        {
+            deck: "bulu_vikavolt",
+            ratio: "even"
         }
     ],
     [
@@ -261,11 +380,23 @@ var decks = [
         },
         {
             deck: "espeon_garb",
-            ratio: null
+            ratio: "sfave"
+        },
+        {
+            deck: "drampa_garb",
+            ratio: "sfave"
         },
         {
             deck: "pikachu_magnezone",
             ratio: "sfave"
+        },
+        {
+            deck: "ninetales",
+            ratio: "vfave"
+        },
+        {
+            deck: "bulu_vikavolt",
+            ratio: "even"
         }
 
     ],
@@ -281,7 +412,7 @@ var decks = [
         },
         {
             deck: "metagross",
-            ratio: null
+            ratio: "fave"
         },
         {
             deck: "hooh_salazzle",
@@ -300,8 +431,116 @@ var decks = [
             ratio: null
         },
         {
+            deck: "drampa_garb",
+            ratio: "sfave"
+        },
+        {
             deck: "rainbow_road",
             ratio: null
+        },
+        {
+            deck: "ninetales",
+            ratio: null
+        },
+        {
+            deck: "bulu_vikavolt",
+            ratio: "even"
         }
-    ]
+    ],
+
+        [
+        {
+            name: "ninetales",
+            consistency: "good",
+            speed: "good"
+        },
+        {
+            deck: "gardevoir",
+            ratio: "even"
+        },
+        {
+            deck: "metagross",
+            ratio: null // unfavorable
+        },
+        {
+            deck: "hooh_salazzle",
+            ratio: "vfave"
+        },
+        {
+            deck: "golisopod_garb",
+            ratio: null // slightly unfavorable
+        },
+        {
+            deck: "greninja",
+            ratio: "even"
+        },
+        {
+            deck: "espeon_garb",
+            ratio: "sfave"
+        },
+        {
+            deck: "drampa_garb",
+            ratio: "sfave"
+        },
+        {
+            deck: "rainbow_road",
+            ratio: null // very unfavorable
+        },
+        {
+            deck: "pikachu_magnezone",
+            ratio: "sfave"
+        },
+        {
+            deck: "bulu_vikavolt",
+            ratio: "even"
+        }
+        ],
+
+        [
+        {
+            name: "bulu_vikavolt",
+            consistency: "great",
+            speed: "good"
+        },
+        {
+            deck: "gardevoir",
+            ratio: "sfave"
+        },
+        {
+            deck: "metagross",
+            ratio: null // unfavorable
+        },
+        {
+            deck: "hooh_salazzle",
+            ratio: "fave"
+        },
+        {
+            deck: "golisopod_garb",
+            ratio: "even"
+        },
+        {
+            deck: "greninja",
+            ratio: "vfave"
+        },
+        {
+            deck: "espeon_garb",
+            ratio: "sfave"
+        },
+        {
+            deck: "drampa_garb",
+            ratio: "even"
+        },
+        {
+            deck: "rainbow_road",
+            ratio: null // very unfavorable
+        },
+        {
+            deck: "pikachu_magnezone",
+            ratio: "even"
+        },
+        {
+            deck: "ninetales",
+            ratio: "even"
+        }
+        ]
     ];
