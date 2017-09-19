@@ -30,7 +30,7 @@ var decks = [
         },
         {
             deck: "hooh_salazzle",
-            ratio: "fave"
+            ratio: "even"
         },
         {
             deck: "golisopod_garb",
@@ -102,7 +102,7 @@ var decks = [
         },
         {
             deck: "gardevoir",
-            ratio: null
+            ratio: "even"
         },
         {
             deck: "golisopod_garb",
@@ -241,7 +241,7 @@ var decks = [
         },
         {
             deck: "gardevoir",
-            ratio: "fave"
+            ratio: "sfave"
         },
         {
             deck: "metagross",

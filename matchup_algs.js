@@ -72,7 +72,10 @@ $(document).ready(function() {
         var ratios = [];
 
         for (var j = 1; j < decks[i].length; j++) // loops through each matchup of the given deck decks[i]
+        {
             ratios.push(ratio_calc(decks[i], j));
+            $("#matchupcont").append("<div>" + decks[i][0].name + " vs. " + decks[i][j].deck + ": " + converttxt(ratio_calc(decks[i], j)) + "</div>")
+        }
 
         var totalFreq = decks[i].length * (sliderRange / 2);
         ratios.push(0.5);
@@ -197,4 +200,32 @@ function convert (text){
         return 0.75;
     else if (text == "great")
         return 0.875;
+}
+
+function converttxt (text){
+    if (text == 0.5)
+        return "Even";
+    else if (text == 0.625)
+        return "Slightly Favorable";
+    else if (text == 0.75)
+        return "Favorable";
+    else if (text == 0.875)
+        return "Very Favorable";
+    else if (text == 0.375)
+        return "Slightly Unfavorable";
+    else if (text == 0.25)
+        return "Unfavorable";
+    else if (text == 0.125)
+        return "Very Unfavorable";
+
+    else if (text == "trash")
+        return "Trash";
+    else if (text == "bad")
+        return "Bad";
+    else if (text == "decent")
+        return "Decent";
+    else if (text == "good")
+        return "Good";
+    else if (text == "great")
+        return "Great";
 }

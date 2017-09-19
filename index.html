@@ -13,30 +13,53 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 </head>
 <body>
-<div id="cont" class="container">
-    <h3>matchupsim</h3>
-    <h4>documentation found <a href="https://github.com/comp0cker/matchupsim">here</a></h4>
-</div>
+
 <div class="container">
-<div class="row">
-    <h4>options</h4>
-    <div class="switch">
-        <label>
-            No weight on consistency
-            <input type="checkbox" class="consis">
-            <span class="lever"></span>
-            Weight on consistency
-        </label>
-    </div>
-    <div class="switch">
-        <label>
-            No weight on speed
-            <input type="checkbox" class="speed">
-            <span class="lever"></span>
-            Weight on speed
-        </label>
+    <h4>matchupsim</h4>
+    <h5>documentation found <a href="https://github.com/comp0cker/matchupsim">here</a></h5>
+
+    <ul id="tabs-swipe-demo" class="tabs">
+        <li class="tab col s3"><a class="active" href="#home">home</a></li>
+        <li class="tab col s3"><a href="#matchups">matchups.js</a></li>
+        <li class="tab col s3"><a href="#options">options</a></li>
+    </ul>
+</div>
+
+<div id="home">
+    <div id="cont" class="container">
     </div>
 </div>
+
+<div id="matchups">
+    <div id="matchupcont" class="container">
+            <h5>listed as the first deck's matchup against the second</h5>
+        <h5>want to suggest a new matchup? submit an issue <a href="https://github.com/comp0cker/matchupsim/issues/new">here</a></h5>
+    </div>
 </div>
+
+<div id="options">
+    <div class="container">
+        <div class="row">
+            <h4>options</h4>
+            <div class="switch">
+                <label>
+                    No weight on consistency
+                    <input type="checkbox" class="consis">
+                    <span class="lever"></span>
+                    Weight on consistency
+                </label>
+            </div>
+            <div class="switch">
+                <label>
+                    No weight on speed
+                    <input type="checkbox" class="speed">
+                    <span class="lever"></span>
+                    Weight on speed
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
